@@ -1,103 +1,78 @@
+"use client";
+import { useEffect, useState } from 'react';
+import { getScaleFactor } from '../../public/utils/utils';
+// import { Code, SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
+import ProfileImage from "../../public/assets/Astronaut.jpg"
+import ProImage from "../../public/assets/ProImageSmiling.jpg"
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const router = useRouter();
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const [scale, setScale] = useState(1);
+
+  useEffect(() => {
+    const updateScale = () => setScale(getScaleFactor());
+    updateScale();
+
+    window.addEventListener('resize', updateScale);
+    return () => window.removeEventListener('resize', updateScale);
+  }, []);
+  const handleButtonClick = () => {
+    window.open('https://www.linkedin.com/in/pedro-henrique-queiroz-50301b221/', '_blank', 'noopener,noreferrer');
+  };
+
+  return (
+    <div className="relative w-full h-full overflow-hidden">
+      {/* Wrapper fixo, escala a partir do topo/esquerda */}
+      <div
+        className="absolute top-0 left-0 origin-top-left"
+        style={{
+          transform: `scale(${scale})`,
+          width: `${100 / scale}%`,
+          height: `${100 / scale}%`
+        }}
+      >
+        <div className="flex flex-col h-full w-full">
+          <div className="flex justify-between mt-0 mb-0 xl:h-22 h-[250px] w-full bg-gradient-to-b from-[#D2D3D7] to-[#CCCCCC]">
+            <span className="ml-5 h-auto text-3xl text-[#396291] flex items-center gap-4 w-full">
+              <div className="xl:h-15 xl:w-15 h-[180px] w-[180px] border-white border-8 xl:border-2 rounded-[50%] overflow-hidden">
+                <Image alt="" src={ProfileImage} width={0} height={0} className="relative bottom-2.5 !w-full" />
+              </div>
+              <span className="w-[calc(100%-64px)] border-b-8 text-7xl xl:text-3xl xl:border-b-2 font-[family-name:var(--font-geist-mono)]">
+                PEDRO HQC_
+              </span>
+            </span>
+          </div>
+          <div className="flex xl:!flex-row flex-col xl:gap-[250px] h-full overflow-hidden items-center">
+            <div className='h-full xl:max-w-[50%] xl:overflow-auto xl:ml-[100px] overflow-hidden'>
+              <Image alt="" src={ProImage} width={0} height={0} className="xl:h-[100%] xl:w-[calc(100%*1.5)] relative" />
+            </div>
+            <div className="flex flex-col xl:!h-[400px] xl:p-0 p-[100px] h-full xl:!w-[600px] w-full xl:!text-lg text-6xl font-[family-name:var(--font-geist-mono)] text-justify ">
+              <span className="xl:!text-4xl text-6xl">Hi! I&apos;m Pedro Coelho</span>
+              <span className="xl:!text-6xl text-[200px]">
+                <span className="xl:!text-7xl text-[256px] font-[family-name:var(--font-jersey-10)]">Game</span> developer
+              </span>
+              Passionate and skilled C# developer with extensive experience in advanced game
+              development, specializing in both 2D and 3D projects. Proficient in implementing
+              design patterns to create efficient, scalable, and maintainable code. Adept at
+              identifying and delivering practical solutions to enhance project outcomes and
+              optimize workflows.
+              {/* <div className="flex xl:gap-20 gap-0 xl:justify-center justify-between xl:mt-10 mt-[200px] xl:h-auto h-[150px]">
+                <button onClick={() => router.push("projects")} className="transform active:scale-90 flex items-center justify-center xl:gap-3 gap-8 xl:w-60 w-[650px] px-4 py-2 bg-[#396291] text-white xl:rounded-lg rounded-[24px] hover:bg-[#2c4e75] transition cursor-pointer xl:text-xl text-5xl">
+                  Projects <Code className=" text-gray-200 xl:w-[22px] xl:h-[22px] h-[70px] w-[80px]" />
+                </button>
+                <button className="transform active:scale-90 flex items-center justify-center xl:gap-3 gap-8 xl:w-60 w-[650px] px-4 py-2 xl:border-4 border-8 border-[#396291] text-[#396291] xl:rounded-lg rounded-[24px] hover:border-[#2c4e75] hover:bg-[#2c4e75] hover:text-white transition cursor-pointer xl:text-xl text-5xl font-bold" onClick={() => handleButtonClick()}>
+                  Hire-me <SquareArrowOutUpRight className="xl:w-[22px] xl:h-[22px] h-[70px] w-[70px]" />
+                </button>
+              </div> */}
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
+
+
   );
 }
