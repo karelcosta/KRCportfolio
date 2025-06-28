@@ -38,16 +38,22 @@ export default function Home() {
           }}
         >
           <div className="flex flex-col h-full w-full">
-            <div className="flex justify-between h-[250px] w-full bg-gradient-to-b from-[#1E1E1E] to-[#2A2A2A]">
+
+            
+
+            {/* <div className="flex justify-between h-[50px] w-full bg-gradient-to-b from-[#1E1E1E] to-[#2A2A2A]">
               <span className="ml-5 h-auto text-3xl text-white flex items-center gap-4 w-full">
                 {/* <div className="h-[180px] w-[180px] border-white border-8 rounded-[50%] overflow-hidden">
                   <Image alt="profile" src={ProfileImage} width={0} height={0} className="relative bottom-2.5 !w-full" />
-                </div> */}
-                <span className="w-[calc(100%-64px)] border-b-8 text-7xl font-[family-name:var(--font-geist-mono)]">
+                </div> 
+                <span className="w-[calc(100%-64px)] border-b-8 text-2xl font-[family-name:var(--font-geist-mono)]">
                   KAREL RC_
                 </span>
               </span>
-            </div>
+            </div> */}
+
+
+            
             <div className="flex flex-col xl:flex-row xl:gap-[150px] h-full overflow-hidden items-center p-10">
               <div className="h-full xl:max-w-[50%] overflow-hidden">
                 <Image alt="dev" src={ProImage} width={0} height={0} className="xl:h-[100%] xl:w-[calc(100%*1.5)] relative" />
