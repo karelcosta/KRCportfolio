@@ -29,9 +29,8 @@ const jersey10 = Jersey_10({
 });
 
 export const metadata: Metadata = {
-  title: "PedroHQC_",
-  description: "Professional Portfolio by PedroHQC",
-
+  title: "KarelRC_",
+  description: "Professional Portfolio by KarelRC",
 };
 
 export default function RootLayout({
@@ -40,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${pixelifySans.variable} ${sixtyfour.variable} ${jersey10.variable} antialiased`}
       >
