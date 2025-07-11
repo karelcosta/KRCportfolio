@@ -35,7 +35,7 @@ export default function Home() {
           height: `${100 / scale}%`,
         }}
       >
-        <div className="flex flex-col h-full w-full">
+        <div className="flex flex-col h-full w-full mu-[30px]">
 
 
 
@@ -51,29 +51,35 @@ export default function Home() {
             </div> */}
 
 
-
-          <div className="flex flex-row xl:flex-col xl:gap-[50px] h-full overflow-hidden items-center p-10">
+          
+          {/* amostruario do portifolio */}
+          <div className="flex flex-col xl:flex-row xl:gap-[60px] h-full overflow-hidden items-center p-10 ml-[50]">
             <div className="h-full xl:max-w-[50%] overflow-hidden">
               <Image alt="dev" src={ProImage} width={0} height={0} className="xl:h-[100%] xl:w-[calc(100%*1.5)] relative" />
             </div>
             <div className="flex flex-col xl:h-[400px] h-full xl:w-[600px] w-full xl:text-lg text-4xl font-[family-name:var(--font-geist-mono)] text-justify mt-10 xl:mt-0">
               <span className="text-5xl mb-4 text-center">Hi! I&apos;m Karel Costa</span>
-              <span className="text-7xl font-[family-name:var(--font-jersey-10)] mb-6 text-center">Web developer</span>
+              <span className="text-7xl font-[family-name:var(--font-jersey-10)] mb-6 text-center">Game & Web developer</span>
               Passionate and skilled C# developer with extensive experience in advanced game
               development, specializing in both 2D and 3D projects. Proficient in implementing
               design patterns to create efficient, scalable, and maintainable code. Adept at
               identifying and delivering practical solutions to enhance project outcomes and
               optimize workflows.
-              {/* <div className="flex xl:gap-10 gap-4 justify-between mt-10 h-auto">
+              <div className="flex xl:gap-10 gap-4 justify-between mt-10 h-auto">
                 <button onClick={() => router.push("projects")} className="transform active:scale-90 flex items-center justify-center gap-4 w-full px-4 py-3 bg-[#396291] text-white rounded-xl hover:bg-[#2c4e75] transition text-xl">
-                  Projects <Code className="w-6 h-6" />
+                  CV <Code className="w-6 h-6" />
                 </button>
                 <button onClick={handleButtonClick} className="transform active:scale-90 flex items-center justify-center gap-4 w-full px-4 py-3 border-2 border-[#396291] text-[#396291] rounded-xl hover:border-[#2c4e75] hover:bg-[#2c4e75] hover:text-white transition text-xl font-bold">
                   Hire-me <SquareArrowOutUpRight className="w-6 h-6" />
                 </button>
-              </div> */}
+              </div>
             </div>
           </div>
+
+
+          {/* informaões adicionais */}{/*estou pensando em não por*/}
+          {/* projetos */}
+          {/* about */}
         </div>
       </div>
     </div>
