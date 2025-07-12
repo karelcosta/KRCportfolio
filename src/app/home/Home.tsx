@@ -9,6 +9,8 @@ import Sidebar from "../components/Sidebar";
 import ProfileImage from "../../../public/assets/Astronaut.jpg";
 import ProImage from "../../../public/assets/ProfileTeste01.jpg";
 
+
+
 export default function Home() {
   const router = useRouter();
   const [scale, setScale] = useState(1);
@@ -26,7 +28,7 @@ export default function Home() {
   };
 
   return (
-    <div className=" w-full min-h-screen bg-[#121212] text-white relative overflow-hidden">
+    <div className=" w-full min-h-screen bg-[#1E1E1E] text-white relative overflow-hidden">
       <div
         className="absolute top-0 left-0 origin-top-left"
         style={{
@@ -75,11 +77,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-
-          {/* informaões adicionais */}{/*estou pensando em não por*/}
-          {/* projetos */}
-          {/* about */}
         </div>
       </div>
     </div>
