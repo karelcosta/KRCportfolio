@@ -28,7 +28,7 @@ export default function Home() {
   };
 
   return (
-    <div className=" w-full min-h-screen bg-[#1E1E1E] text-white relative overflow-hidden">
+    <div className=" w-full min-h-screen bg-[#CCCCCC] text-black relative overflow-hidden">
       <div
         className="absolute top-0 left-0 origin-top-left"
         style={{
