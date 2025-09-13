@@ -33,7 +33,7 @@ export default function Projects() {
         <div className="bg-[#1E1E1E] " >
 
 
-            <div className="relative w-full h-full overflow-hidden">
+            <div className="relative w-full min-h-[250px] overflow-hidden">
                 <div className="absolute top-0 left-0 origin-top-left" style={{ transform: `scale(${scale})`, width: `${100 / scale}%`, height: `${100 / scale}%` }}>
                     <div className="flex flex-col w-full h-full">
                         <div className="flex justify-between mt-0 mb-0 xl:h-22 h-[250px] w-full bg-gradient-to-b from-[#D2D3D7] to-[#CCCCCC]">
