@@ -19,9 +19,9 @@ export default function Page() {
       <div id="projects">
         <Projects />
       </div>
-      <div id="about">
+      {/* <div id="about">
         <About />
-      </div>
+      </div> */}
     </div>
   );
 }
