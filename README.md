@@ -1,12 +1,5 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Alterações para fazer 
-
-ajustar nova tela para exibir os detalhes dos projetos
-vou desativar o botão para ele não encaminhar para a pagina dos detalhes dos projetos link: ajustnum01
-
-ajustar o tamanho dos cards nos gris na aba de projetos  
-
 ## Getting Started
 
 First, run the development server:
