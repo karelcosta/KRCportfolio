@@ -37,7 +37,7 @@ export default function Projects() {
         new DialogData("./assets/TiETeCapa.png", "./assets/TiETeCapa.png", "./assets/TiETeCapa.png", "./videos/AfonseShowCase.MP4",
             "In this project I developed a state machine system to manage character and enemy behaviors, enabling smooth transitions between actions like movement, jumping, and attacking.", "For the player, the system ensured responsive gameplay, while for enemies, it allowed random, threatening actions with raycast-based navigation for more dynamic movement.",
             "The same system was applied to control the first boss, organizing its attack patterns in a way that made it both challenging and predictable, enhancing the overall gameplay experience."
-            , "Afonse"
+            , "ti&te"
         ),
         new DialogData("./assets/TiETeCapa.png", "./assets/TiETeCapa.png", "./assets/TiETeCapa.png", "./videos/AfonseShowCase.MP4",
             "Using a state machine, Afonse (aka the player) can freely switch between states, altering the behavior based on each one.",
@@ -125,7 +125,7 @@ export default function Projects() {
                     </div>
                 </div>
             </div>
-            <div className="relative w-full min-h-[250px] overflow-hidden">
+            <div className="relative w-full min-h-[80px] overflow-hidden">
                 <div
                     className="absolute top-0 left-0 origin-top-left"
                     style={{
@@ -137,7 +137,7 @@ export default function Projects() {
                     <div className="flex flex-col w-full h-[80px] ">
                         <div className="relative flex justify-between mt-0 mb-0 xl:h-22 h-[250px] w-full bg-gradient-to-b ">
                             <span className="ml-5 h-auto text-3xl text-[#FFFFFF] flex items-center gap-4 w-full z-10">
-                                <span className="w-[calc(100%-64px)] border-t-8 text-7xl xl:text-3xl xl:border-t-2 font-[family-name:var(--font-geist-mono)] font-bold">
+                                <span className="w-[calc(100%-64px)] border-b-8 text-7xl xl:text-3xl xl:border-b-2 font-[family-name:var(--font-geist-mono)] font-bold">
                                     PROJECTS
                                 </span>
                             </span>
@@ -168,20 +168,13 @@ export default function Projects() {
             </div> */}
 
 
-
-
-
-
-
-
-
             {/* <div className="flex flex-col xl:flex-row xl:gap-[60px] h-full overflow-hidden items-center p-10 ml-[50]">
                 <div className="h-full xl:max-w-[50%] overflow-hidden">
                     <Image alt="dev" src={TiETeCapa} width={0} height={0} className="xl:h-[100%] xl:w-[calc(100%*1.5)] relative" />
                 </div>
             </div> */}
             <div className="w-full h-full flex xl:flex-row flex-col items-center justify-around gap-6 p-10 xl:overflow-x-auto overflow-y-auto overflow-x-hidden xl:overflow-y-hidden scroll-smooth snap-x snap-mandatory" ref={containerRef}>
-                <ProjectCard title="Afonse" description="Afonse is an immersive adventure that puts you in control of the Afonsos — the last survivors of a post-apocalyptic world abandoned amidst nature and concrete." imageUrl="./assets/AfonseMain.png" cardImageUrl="/assets/TiETeCapa.png" dialogData={tiETeDialogData} />
+                <ProjectCard title="Ti&Tê" description="Afonse is an immersive adventure that puts you in control of the Afonsos — the last survivors of a post-apocalyptic world abandoned amidst nature and concrete." imageUrl="./assets/TiETeCapa.png" cardImageUrl="/assets/TiETeCapa.png" dialogData={tiETeDialogData} />
                 {/* <ProjectCard title="Bot Vinnik" description="From Deep Green Games studio, Engage with BOT.vinnik, a witty Soviet AI chess instructor! His sharp humor and rigorous challenges will mold you into a pro." imageUrl="./assets/BotVinnikCard.png" cardImageUrl="./assets/BotVinnikCardImage.png" dialogData={botVinnikDialogData} />
                 <ProjectCard title="Wonder Wallace" description="Wonder Wallace is a fast-paced fishing game where you play as Wallace, a bear on a mission to catch lunch. Tasked with reeling in three delicious fish, Wallace must race against the clock to complete his goal." imageUrl="./assets/WonderWallaceCard.png" cardImageUrl="./assets/WonderWallaceKitchen.png" dialogData={wonderWallaceDialogData} /> */}
                 {/* <ProjectCard title="Teste" description="teste" imageUrl="../assets/placeHolder.jpg" cardImageUrl="../assets/AfonseVsBoss.png" dialogData={afonseDialogData} /> */}

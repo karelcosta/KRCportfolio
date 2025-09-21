@@ -10,7 +10,7 @@ import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
 export const teste = tv({
   slots: {
-    card: "group flex flex-col-reverse mx-3 xl:w-[500px] w-[1500px] xl:h-[750px] h-[2250px] xl:min-w-[500px] xl:min-h-[300px] min-w-[1500px] min-h-[2250px] transition-all duration-180 bg-cover xl:hover:cursor-pointer xl:hover:h-[800px] xl:hover:z-[1000] rounded-2xl bg-no-repeat bg-center",
+    card: "group flex flex-col-reverse mx-3 xl:w-[500px] w-[300px] xl:h-[700px] h-[500px] xl:min-w-[500px] xl:min-h-[700px] min-w-[300px] min-h-[500px] transition-all duration-180 bg-cover xl:hover:cursor-pointer xl:hover:h-[900px]  rounded-2xl bg-no-repeat bg-center",
     cardBlur: "relative before:content-[''] before:rounded-2xl before:absolute before:inset-0 before:bg-black/70 before:backdrop-blur-sm before:opacity-0 before:transition-opacity before:duration-180 xl:hover:before:opacity-100",
     titleClass: "absolute w-full text-center bottom-[8px] left-1/2 -translate-x-1/2  text-white  font-[family-name:var(--font-jersey-10)] xl:text-6xl text-9xl  opacity-100 transition-all duration-180 xl:group-hover:translate-y-[-400px]",
     dialogTitleClass: "mx-auto font-[family-name:var(--font-jersey-10)] xl:text-7xl text-9xl mt-[75px] text-white",
