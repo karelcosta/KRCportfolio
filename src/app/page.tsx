@@ -7,7 +7,7 @@
 import Sidebar from "./components/Sidebar";
 import Home from "./home/Home";
 import Projects from "./projects/Projects";
-import About from "./About/About";
+// import About from "./About/About";
 
 export default function Page() {
   return (

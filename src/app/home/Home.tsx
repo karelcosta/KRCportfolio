@@ -4,9 +4,9 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { getScaleFactor } from "../../../public/utils/utils";
 import { Code, SquareArrowOutUpRight } from "lucide-react";
-import Sidebar from "../components/Sidebar";
+// import Sidebar from "../components/Sidebar";
 
-import ProfileImage from "../../../public/assets/Astronaut.jpg";
+// import ProfileImage from "../../../public/assets/Astronaut.jpg";
 import ProImage from "../../../public/assets/ProfileTeste01.jpg";
 
 
