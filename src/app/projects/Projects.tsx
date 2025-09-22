@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 // import Image from "next/image";
 import { getScaleFactor } from "../../../public/utils/utils";
 // import { Code, SquareArrowOutUpRight } from "lucide-react";
