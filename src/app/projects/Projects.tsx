@@ -10,10 +10,10 @@ import ProjectCard from "./components/project-card";
 
 
 export default function Projects() {
-    const router = useRouter();
+    // const router = useRouter();
     const containerRef = useRef(null);
-    const cardWidth = 500;
-    const gap = 24;
+    // const cardWidth = 500;
+    // const gap = 24;
     const [scale, setScale] = useState(1); // Você pode ajustar esse valor dinamicamente
     useEffect(() => {
         const updateScale = () => setScale(getScaleFactor());
@@ -22,15 +22,15 @@ export default function Projects() {
         window.addEventListener('resize', updateScale);
         return () => window.removeEventListener('resize', updateScale);
     }, []);
-    const scroll = (direction: string) => {
-        if (containerRef.current) {
-            //@ts-expect-error null inexistent
-            containerRef.current.scrollBy({
-                left: direction === 'right' ? cardWidth + gap : -(cardWidth + gap),
-                behavior: 'smooth'
-            });
-        }
-    };
+    // const scroll = (direction: string) => {
+    //     if (containerRef.current) {
+    //         //@ts-expect-error null inexistent
+    //         containerRef.current.scrollBy({
+    //             left: direction === 'right' ? cardWidth + gap : -(cardWidth + gap),
+    //             behavior: 'smooth'
+    //         });
+    //     }
+    // };
 
 
     const tiETeDialogData = [
