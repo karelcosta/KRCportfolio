@@ -6,7 +6,7 @@ import { getScaleFactor } from "../../../public/utils/utils";
 // import { Code, SquareArrowOutUpRight } from "lucide-react";
 // import TiETeCapa from "/assets/TiETeCapa.png";
 import { DialogData } from './utilsClasses';
-import ProjectCard from "./components/project-card";
+// import ProjectCard from "./components/project-card";
 import ProjectCardnew from "./components/project-cardnew";
 
 
