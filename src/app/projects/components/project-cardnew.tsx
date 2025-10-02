@@ -15,8 +15,8 @@ export default function ProjectCardnew({
   title,
   description,
   imageUrl,
-  cardImageUrl,
-  dialogData,
+  // cardImageUrl,
+  // dialogData,
 }: ProjectCardProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
