@@ -149,6 +149,7 @@ export default function ProjectCardnew({
                   <video src={item.videoSrc}
                     autoPlay
                     loop
+                    muted
                     width="0"
                     height="0"
                     className="rounded-md shadow-lg w-full"></video>

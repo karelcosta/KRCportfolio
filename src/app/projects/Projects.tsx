@@ -35,22 +35,22 @@ export default function Projects() {
 
 
     const tiETeDialogData = [
-        new DialogData("./assets/TiETeCapa.png", "./assets/TiETeCapa.png", "./assets/TiETeCapa.png", "./videos/AfonseShowCase.MP4",
+        new DialogData("./assets/map.png", "./assets/map.png", "./assets/map.png", "./videos/turtleMovement.MP4",
             "In this project I developed a state machine system to manage character and enemy behaviors, enabling smooth transitions between actions like movement, jumping, and attacking.", "For the player, the system ensured responsive gameplay, while for enemies, it allowed random, threatening actions with raycast-based navigation for more dynamic movement.",
             "The same system was applied to control the first boss, organizing its attack patterns in a way that made it both challenging and predictable, enhancing the overall gameplay experience."
             , "ti&te"
         ),
-        new DialogData("./assets/TiETeCapa.png", "./assets/TiETeCapa.png", "./assets/TiETeCapa.png", "./videos/AfonseShowCase.MP4",
+        new DialogData("./assets/turtleAltarComplet.png", "./assets/turtleAltar.png", "./assets/turtleAltarEnemy.png", "./videos/turtleMovement.MP4",
             "Using a state machine, Afonse (aka the player) can freely switch between states, altering the behavior based on each one.",
             "This system has three main components: the PlayerBrain, which initializes the state machine; the StateMachine class, which is responsible for setting up the states; and the individual States, which contain their own behavior within themselves. For example, a GlideState can handle input and physics to change how the player moves in the air.",
             "State switching can occur in two ways. The first and most common happens through in-state conditions that trigger transitions. The second involves exceptions that can force a state change at any time, as long as their conditions are met."
-            , "State-Machine"
+            , "Tartarugas"
         ),
-        new DialogData("./assets/TiETeCapa.png", "./assets/TiETeCapa.png", "./assets/TiETeCapa.png", "./videos/AfonseShowCase.MP4",
+        new DialogData("./assets/TiETeCapa.png", "./assets/catfishEnemy2.png", "./assets/tentacle2.png", "./videos/AfonseShowCase.MP4",
             "The boss has its own state machine and will switch between states, with each state representing an action. Once an action is completed, the boss transitions to another state, thus performing a different action.",
             "Unlike the player, the boss's state machine doesn't wait for input to change states. Instead, it performs its idle behavior and reacts dynamically to the player's movements.",
             "This makes the boss feel alive, as if it has its own mind, and allows the player to analyze its behavior to discover the best strategy for defeating it."
-            , "Boss"
+            , "Inimigos"
         ),
         new DialogData("./assets/TiETeCapa.png", "./assets/TiETeCapa.png", "./assets/TiETeCapa.png", "./videos/AfonseShowCase.MP4",
             "These enemies are frightening spiders that jump around unpredictably, with the sole intention of disturbing the player (Afonse). Their erratic movements create a constant sense of imminent danger.",
