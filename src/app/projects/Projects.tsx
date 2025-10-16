@@ -34,29 +34,33 @@ export default function Projects() {
     // };
 
 
+
+
+
+// 
     const tiETeDialogData = [
-        new DialogData("./assets/TiETe/game.png", "./assets/TiETe/img1.png", "./assets/TiETe/img2.png", "./videos/TiETe/turtleMovement.MP4",
-            "In this project I developed a state machine system to manage character and enemy behaviors, enabling smooth transitions between actions like movement, jumping, and attacking.", "For the player, the system ensured responsive gameplay, while for enemies, it allowed random, threatening actions with raycast-based navigation for more dynamic movement.",
-            "The same system was applied to control the first boss, organizing its attack patterns in a way that made it both challenging and predictable, enhancing the overall gameplay experience."
+        new DialogData("./assets/TiETe/game.png", "./assets/TiETe/img1.png", "./assets/TiETe/img2.png", "./videos/TiETe/Game.MP4",
+            "O objetivo principal do jogador em Ti&Tê é proteger a Tartaruga Limpa da aniquilação. A jogabilidade se desenrola em um mapa bipartido — a Zona Limpa e a Zona Suja — onde a Tartaruga Limpa é o alvo constante dos ataques inimigos.", "O ciclo de jogo é baseado em gerenciamento de recursos e defesa posicional. O jogador deve coletar recursos Algas e Pérolas, que se convertem em energia. Esta energia é a moeda para invocar os próprios combatentes.",
+            "Todas as unidades aliadas e inimigas são geradas próximas às suas respectivas tartarugas. O posicionamento estratégico das unidades do jogador é crucial para criar barreiras e contra-ataques eficazes contra as levas de inimigos gerados pela Tartaruga Suja."
             , "ti&te"
         ),
         new DialogData("./assets/TiETe/turtleAltarComplet.png", "./assets/TiETe/turtleAltar.png", "./assets/TiETe/turtleAltarEnemy.png", "./videos/TiETe/turtleMovement.MP4",
-            "Using a state machine, Afonse (aka the player) can freely switch between states, altering the behavior based on each one.",
-            "This system has three main components: the PlayerBrain, which initializes the state machine; the StateMachine class, which is responsible for setting up the states; and the individual States, which contain their own behavior within themselves. For example, a GlideState can handle input and physics to change how the player moves in the air.",
-            "State switching can occur in two ways. The first and most common happens through in-state conditions that trigger transitions. The second involves exceptions that can force a state change at any time, as long as their conditions are met."
-            , "Tartarugas"
+            "O jogo gira em torno de duas tartarugas. A Tartaruga Limpa é o alvo que o jogador deve proteger. É o ponto de vitória/derrota.",
+            "A Tartaruga Suja é a geradora de inimigos. Ela é imortal, garantindo que o objetivo do jogador seja unicamente defender, e não atacar.",
+            "Ambas as tartarugas determinam os pontos de surgimento (spawn) das suas respectivas tropas no mapa.",
+            "Tartarugas"
         ),
         new DialogData("./assets/TiETe/stincat.png", "./assets/TiETe/catfish.png", "./assets/TiETe/cameowrao.png", "./videos/TiETe/CameowraoExplosion.MP4",
-            "These enemies are frightening spiders that jump around unpredictably, with the sole intention of disturbing the player (Afonse). Their erratic movements create a constant sense of imminent danger.",
-            "Their AI uses a state machine that determines the spider’s next move by analyzing the environment with Raycasts, allowing for precise positioning while remaining performant. It scans for potential jump locations or checks for nearby walls, and based on this analysis, the spider decides whether to jump or simply walk in the chosen direction.",
-            "The spiders' state machine is simple, with only three main states — Idle, Move, and Jump — yet it effectively makes them feel alive and presents a constant threat to the player."
-            , "Characters"
+            "O jogador invoca três tipos de soldados, que são fusões de peixes e gatos. Eles têm aparência limpa.",
+            "O Catfish (Melee) é a unidade corpo a corpo, usada para defender e absorver dano na linha de frente.",
+            "O Stincat (Ranged) é a unidade de ataque à distância, para suporte de fogo. O Cameowrão (Kamikaze) é a unidade de sacrifício com ataque explosivo.",
+            "Characters"
         ),
         new DialogData("./assets/TiETe/stincatEnemy.png", "./assets/TiETe/catfishEnemy.png", "./assets/TiETe/cameowraoEnemy.png", "./videos/TiETe/Tentacle.MP4",
-            "The boss has its own state machine and will switch between states, with each state representing an action. Once an action is completed, the boss transitions to another state, thus performing a different action.",
-            "Unlike the player, the boss's state machine doesn't wait for input to change states. Instead, it performs its idle behavior and reacts dynamically to the player's movements.",
-            "This makes the boss feel alive, as if it has its own mind, and allows the player to analyze its behavior to discover the best strategy for defeating it."
-            , "Inimigos"
+            "Os inimigos são versões corrompidas dos soldados do jogador (fusões de peixes e gatos), com aparência suja. Eles tentam matar a Tartaruga Limpa.",
+            "Eles também se dividem em três classes: Melee, Ranged e Kamikaze.",
+            "Além dos soldados, Tentáculos surgem no cenário como obstáculos ou pontos de spawn inimigos adicionais.",
+            "Inimigos"
         ),
     ]
 
@@ -175,7 +179,7 @@ export default function Projects() {
                 </div>
             </div> */}
             <div className=" w-full h-full flex xl:flex-row flex-col items-center justify-around gap-6 p-10 xl:overflow-x-auto overflow-y-auto overflow-x-hidden xl:overflow-y-hidden scroll-smooth snap-x snap-mandatory" ref={containerRef}>
-                <ProjectCardnew title="Ti&Tê" description="Ti&Tê é um RTS envolvente que coloca você no comando de tartarugas guerreiras, encarregadas de proteger sua líder enquanto tartarugas inimigas tentam invadi-la. Cada tartaruga pode invocar peixes, e a gameplay exige estratégia para controlar essas criaturas e garantir a defesa até que o tempo acabe." imageUrl="./assets/TiETeCapa.png" cardImageUrl="/assets/TiETeCapa.png" dialogData={tiETeDialogData} />
+                <ProjectCardnew title="Ti&Tê" description="Ti&Tê é um RTS de ritmo acelerado que se passa no fundo do mar, dividido entre a pureza da vida marinha e a ameaça da poluição. O jogador deve defender a Tartaruga Limpa de ondas de inimigos invocados pela imortal Tartaruga Suja, gerenciando recursos para convocar suas próprias tropas e garantir a sobrevivência até o fim da maré inimiga." imageUrl="./assets/TiETeCapa.png" cardImageUrl="/assets/TiETeCapa.png" dialogData={tiETeDialogData} />
                 {/* <ProjectCard title="Bot Vinnik" description="From Deep Green Games studio, Engage with BOT.vinnik, a witty Soviet AI chess instructor! His sharp humor and rigorous challenges will mold you into a pro." imageUrl="./assets/BotVinnikCard.png" cardImageUrl="./assets/BotVinnikCardImage.png" dialogData={botVinnikDialogData} />
                 <ProjectCard title="Wonder Wallace" description="Wonder Wallace is a fast-paced fishing game where you play as Wallace, a bear on a mission to catch lunch. Tasked with reeling in three delicious fish, Wallace must race against the clock to complete his goal." imageUrl="./assets/WonderWallaceCard.png" cardImageUrl="./assets/WonderWallaceKitchen.png" dialogData={wonderWallaceDialogData} /> */}
                 {/* <ProjectCard title="Teste" description="teste" imageUrl="../assets/placeHolder.jpg" cardImageUrl="../assets/AfonseVsBoss.png" dialogData={afonseDialogData} /> */}
@@ -184,3 +188,6 @@ export default function Projects() {
         </div>
     );
 }
+
+
+
