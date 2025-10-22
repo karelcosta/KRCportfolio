@@ -39,24 +39,24 @@ export default function Projects() {
 
 // 
     const tiETeDialogData = [
-        new DialogData("./assets/TiETe/game.png", "./assets/TiETe/img1.png", "./assets/TiETe/img2.png", "/videos/TiETe_Game.MP4",
+        new DialogData("/assets/TiETe/game.png", "/assets/TiETe/img1.png", "/assets/TiETe/img2.png", "/videos/TiETe_Game.MP4",
             "O objetivo principal do jogador em Ti&Tê é proteger a Tartaruga Limpa da aniquilação. A jogabilidade se desenrola em um mapa bipartido — a Zona Limpa e a Zona Suja — onde a Tartaruga Limpa é o alvo constante dos ataques inimigos.", "O ciclo de jogo é baseado em gerenciamento de recursos e defesa posicional. O jogador deve coletar recursos Algas e Pérolas, que se convertem em energia. Esta energia é a moeda para invocar os próprios combatentes.",
             "Todas as unidades aliadas e inimigas são geradas próximas às suas respectivas tartarugas. O posicionamento estratégico das unidades do jogador é crucial para criar barreiras e contra-ataques eficazes contra as levas de inimigos gerados pela Tartaruga Suja."
             , "ti&te"
         ),
-        new DialogData("./assets/TiETe/turtleAltarComplet.png", "./assets/TiETe/turtleAltar.png", "./assets/TiETe/turtleAltarEnemy.png", "/videos/TiETe_turtleMovement.MP4",
+        new DialogData("/assets/TiETe/turtleAltarComplet.png", "/assets/TiETe/turtleAltar.png", "/assets/TiETe/turtleAltarEnemy.png", "/videos/TiETe_turtleMovement.MP4",
             "O jogo gira em torno de duas tartarugas. A Tartaruga Limpa é o alvo que o jogador deve proteger. É o ponto de vitória/derrota.",
             "A Tartaruga Suja é a geradora de inimigos. Ela é imortal, garantindo que o objetivo do jogador seja unicamente defender, e não atacar.",
             "Ambas as tartarugas determinam os pontos de surgimento (spawn) das suas respectivas tropas no mapa.",
             "Tartarugas"
         ),
-        new DialogData("./assets/TiETe/stincat.png", "./assets/TiETe/catfish.png", "./assets/TiETe/cameowrao.png", "/videos/TiETe_CameowraoExplosion.MP4",
+        new DialogData("/assets/TiETe/stincat.png", "/assets/TiETe/catfish.png", "/assets/TiETe/cameowrao.png", "/videos/TiETe_CameowraoExplosion.MP4",
             "O jogador invoca três tipos de soldados, que são fusões de peixes e gatos. Eles têm aparência limpa.",
             "O Catfish (Melee) é a unidade corpo a corpo, usada para defender e absorver dano na linha de frente.",
             "O Stincat (Ranged) é a unidade de ataque à distância, para suporte de fogo. O Cameowrão (Kamikaze) é a unidade de sacrifício com ataque explosivo.",
             "Characters"
         ),
-        new DialogData("./assets/TiETe/stincatEnemy.png", "./assets/TiETe/catfishEnemy.png", "./assets/TiETe/cameowraoEnemy.png", "/videos/TiETe_Tentacle.MP4",
+        new DialogData("/assets/TiETe/stincatEnemy.png", "/assets/TiETe/catfishEnemy.png", "/assets/TiETe/cameowraoEnemy.png", "/videos/TiETe_Tentacle.MP4",
             "Os inimigos são versões corrompidas dos soldados do jogador (fusões de peixes e gatos), com aparência suja. Eles tentam matar a Tartaruga Limpa.",
             "Eles também se dividem em três classes: Melee, Ranged e Kamikaze.",
             "Além dos soldados, Tentáculos surgem no cenário como obstáculos ou pontos de spawn inimigos adicionais.",
@@ -179,7 +179,7 @@ export default function Projects() {
                 </div>
             </div> */}
             <div className=" w-full h-full flex xl:flex-row flex-col items-center justify-around gap-6 p-10 xl:overflow-x-auto overflow-y-auto overflow-x-hidden xl:overflow-y-hidden scroll-smooth snap-x snap-mandatory" ref={containerRef}>
-                <ProjectCardnew title="Ti&Tê" description="Ti&Tê é um RTS de ritmo acelerado que se passa no fundo do mar, dividido entre a pureza da vida marinha e a ameaça da poluição. O jogador deve defender a Tartaruga Limpa de ondas de inimigos invocados pela imortal Tartaruga Suja, gerenciando recursos para convocar suas próprias tropas e garantir a sobrevivência até o fim da maré inimiga." imageUrl="./assets/TiETeCapa.png" cardImageUrl="/assets/TiETeCapa.png" dialogData={tiETeDialogData} />
+                <ProjectCardnew title="Ti&Tê" description="Ti&Tê é um RTS de ritmo acelerado que se passa no fundo do mar, dividido entre a pureza da vida marinha e a ameaça da poluição. O jogador deve defender a Tartaruga Limpa de ondas de inimigos invocados pela imortal Tartaruga Suja, gerenciando recursos para convocar suas próprias tropas e garantir a sobrevivência até o fim da maré inimiga." imageUrl="/assets/TiETeCapa.png" cardImageUrl="/assets/TiETeCapa.png" dialogData={tiETeDialogData} />
                 {/* <ProjectCard title="Bot Vinnik" description="From Deep Green Games studio, Engage with BOT.vinnik, a witty Soviet AI chess instructor! His sharp humor and rigorous challenges will mold you into a pro." imageUrl="./assets/BotVinnikCard.png" cardImageUrl="./assets/BotVinnikCardImage.png" dialogData={botVinnikDialogData} />
                 <ProjectCard title="Wonder Wallace" description="Wonder Wallace is a fast-paced fishing game where you play as Wallace, a bear on a mission to catch lunch. Tasked with reeling in three delicious fish, Wallace must race against the clock to complete his goal." imageUrl="./assets/WonderWallaceCard.png" cardImageUrl="./assets/WonderWallaceKitchen.png" dialogData={wonderWallaceDialogData} /> */}
                 {/* <ProjectCard title="Teste" description="teste" imageUrl="../assets/placeHolder.jpg" cardImageUrl="../assets/AfonseVsBoss.png" dialogData={afonseDialogData} /> */}
