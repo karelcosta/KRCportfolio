@@ -7,7 +7,7 @@ import { Code, SquareArrowOutUpRight } from "lucide-react";
 // import Sidebar from "../components/Sidebar";
 
 // import ProfileImage from "../../../public/assets/Astronaut.jpg";
-import ProImage from "../../../public/assets/ProfileTeste01.jpg";
+import ProImage from "../../../public/assets/Profile.jpg";
 
 
 
