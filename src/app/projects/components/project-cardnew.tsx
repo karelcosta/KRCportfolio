@@ -150,8 +150,6 @@ export default function ProjectCardnew({
                     autoPlay
                     loop
                     muted
-                    width="0"
-                    height="0"
                     className="rounded-md shadow-lg w-full"></video>
                 </span>
               </span>
