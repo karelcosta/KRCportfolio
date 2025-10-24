@@ -39,7 +39,7 @@ export default function Projects() {
 
     // 
     const tiETeDialogData = [
-        new DialogData("./assets/game.png", "./assets/img1.png", "./assets/img2.png", "../../../public/videos/TiETeGame.mp4",
+        new DialogData("./assets/game.png", "./assets/img1.png", "./assets/img2.png", "/videos/TiETeGame.mp4",
             "O objetivo principal do jogador em Ti&Tê é proteger a Tartaruga Limpa da aniquilação. A jogabilidade se desenrola em um mapa bipartido — a Zona Limpa e a Zona Suja — onde a Tartaruga Limpa é o alvo constante dos ataques inimigos.", "O ciclo de jogo é baseado em gerenciamento de recursos e defesa posicional. O jogador deve coletar recursos Algas e Pérolas, que se convertem em energia. Esta energia é a moeda para invocar os próprios combatentes.",
             "Todas as unidades aliadas e inimigas são geradas próximas às suas respectivas tartarugas. O posicionamento estratégico das unidades do jogador é crucial para criar barreiras e contra-ataques eficazes contra as levas de inimigos gerados pela Tartaruga Suja."
             , "ti&te"
