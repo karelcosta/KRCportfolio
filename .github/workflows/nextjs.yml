@@ -76,8 +76,39 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
-      - name: Copy static videos
-        run: mkdir -p ./out/videos && cp -r ./public/videos/* ./out/videos/
+      - name: Export static site
+        run: ${{ steps.detect-package-manager.outputs.runner }} next export
+
+      - name: Copy static videos to out (handles basePath)
+        run: |
+          # ajusta se seus vídeos estão em public/videos
+          SRC_DIR=public/videos
+          if [ ! -d "$SRC_DIR" ]; then
+            echo "Pasta $SRC_DIR não existe — nada para copiar"
+            exit 0
+          fi
+
+          # detecta se existe uma pasta raiz de site (ex: out/<repoName>) criada pelo next export
+          # se existir, copia para dentro dela; senão copia direto para out/videos
+          # substitua 'KRCportfolio' pelo seu basePath se quiser forçar
+          POSSIBLE_SUBDIR=$(ls out | head -n 1 || true)
+
+          if [ -d "out/$POSSIBLE_SUBDIR/_next" ]; then
+            DEST="out/$POSSIBLE_SUBDIR/videos"
+          else
+            DEST="out/videos"
+          fi
+
+          echo "Copiando vídeos de $SRC_DIR para $DEST"
+          mkdir -p "$DEST"
+          cp -rv "$SRC_DIR"/* "$DEST/" || true
+
+      - name: Show out folder (debug)
+        run: |
+          echo "===== out tree ====="
+          du -sh out || true
+          ls -R out | sed -n '1,200p'
+
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
