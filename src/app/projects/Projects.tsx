@@ -7,7 +7,7 @@ import { getScaleFactor } from "../../../public/utils/utils";
 // import TiETeCapa from "/assets/TiETeCapa.png";
 import { DialogData } from './utilsClasses';
 // import ProjectCard from "./components/project-card";
-import ProjectCardnew from "./components/project-cardnew";
+import ProjectCard from "./components/project-card";
 
 
 export default function Projects() {
@@ -207,11 +207,11 @@ export default function Projects() {
                 </div>
             </div> */}
             <div className=" w-full h-full flex xl:flex-row flex-col items-center justify-around gap-6 p-10 xl:overflow-x-auto overflow-y-auto overflow-x-hidden xl:overflow-y-hidden scroll-smooth snap-x snap-mandatory" ref={containerRef}>
-                <ProjectCardnew title="Ti&Tê" description="Ti&Tê é um RTS de ritmo acelerado que se passa no fundo do mar, dividido entre a pureza da vida marinha e a ameaça da poluição. O jogador deve defender a Tartaruga Limpa de ondas de inimigos invocados pela imortal Tartaruga Suja, gerenciando recursos para convocar suas próprias tropas e garantir a sobrevivência até o fim da maré inimiga." imageUrl="/assets/TiETeCapa.png" cardImageUrl="/assets/TiETeCapa.png" dialogData={tiETeDialogData} />
-                {/* <ProjectCard title="Bot Vinnik" description="From Deep Green Games studio, Engage with BOT.vinnik, a witty Soviet AI chess instructor! His sharp humor and rigorous challenges will mold you into a pro." imageUrl="./assets/BotVinnikCard.png" cardImageUrl="./assets/BotVinnikCardImage.png" dialogData={botVinnikDialogData} />
-                <ProjectCard title="Wonder Wallace" description="Wonder Wallace is a fast-paced fishing game where you play as Wallace, a bear on a mission to catch lunch. Tasked with reeling in three delicious fish, Wallace must race against the clock to complete his goal." imageUrl="./assets/WonderWallaceCard.png" cardImageUrl="./assets/WonderWallaceKitchen.png" dialogData={wonderWallaceDialogData} /> */}
-                {/* <ProjectCard title="Teste" description="teste" imageUrl="../assets/placeHolder.jpg" cardImageUrl="../assets/AfonseVsBoss.png" dialogData={afonseDialogData} /> */}
-            </div>
+                {/* local */}
+                {/* <ProjectCard title="Ti&Tê" description="Ti&Tê é um RTS de ritmo acelerado que se passa no fundo do mar, dividido entre a pureza da vida marinha e a ameaça da poluição. O jogador deve defender a Tartaruga Limpa de ondas de inimigos invocados pela imortal Tartaruga Suja, gerenciando recursos para convocar suas próprias tropas e garantir a sobrevivência até o fim da maré inimiga." imageUrl="./assets/TiETeCapa.png" cardImageUrl="./assets/TiETeCapa.png" dialogData={tiETeDialogData} /> */}
+                {/* live */}
+                <ProjectCard title="Ti&Tê" description="Ti&Tê é um RTS de ritmo acelerado que se passa no fundo do mar, dividido entre a pureza da vida marinha e a ameaça da poluição. O jogador deve defender a Tartaruga Limpa de ondas de inimigos invocados pela imortal Tartaruga Suja, gerenciando recursos para convocar suas próprias tropas e garantir a sobrevivência até o fim da maré inimiga." imageUrl="./assets/TiETeCapa.png" cardImageUrl="./assets/TiETeCapa.png" dialogData={tiETeDialogData} />
+                </div>
 
         </div>
     );

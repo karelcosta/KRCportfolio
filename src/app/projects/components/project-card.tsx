@@ -1,12 +1,17 @@
-import 'simplebar-react/dist/simplebar.min.css';
-import SimpleBar from 'simplebar-react';
+import Image from "next/image";
+import Dialog from "./dialog";
+import { DialogData } from "../utilsClasses";
+import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 import { tv } from "tailwind-variants";
 import { useRef, useState } from 'react';
-import Dialog from './dialog';
-import Image from "next/image";
-import { DialogData } from '../utilsClasses';
-import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  imageUrl: string; // imagem principal (screenshot do projeto)
+  cardImageUrl: string; // pode ser usada como logo ou detalhe
+  dialogData: DialogData[];
+}
 
 export const teste = tv({
   slots: {
@@ -26,30 +31,25 @@ export const teste = tv({
 });
 
 const {
-  card,
-  cardBlur,
-  titleClass,
+  // card,
+  // cardBlur,
+  // titleClass,
   dialogTitleClass,
-  descriptionArea,
-  descriptionClass,
-  descriptionImage,
-  borderGradient,
-  descriptionImageContainer
+  // descriptionArea,
+  // descriptionClass,
+  // descriptionImage,
+  // borderGradient,
+  // descriptionImageContainer
 } = teste();
 
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  imageUrl: string;
-  cardImageUrl: string;
-  dialogData: DialogData[];
-}
-
-export default function ProjectCard({ title, description, imageUrl, cardImageUrl, dialogData }: ProjectCardProps) {
+export default function ProjectCard({
+  title,
+  description,
+  imageUrl,
+  // cardImageUrl,
+  dialogData,
+}: ProjectCardProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const containerRef = useRef(null);
-  const cardHeight = 881;
-  const gap = 0;
   const scroll = (direction: string) => {
     if (containerRef.current) {
       //@ts-expect-error null inexistent
@@ -59,23 +59,58 @@ export default function ProjectCard({ title, description, imageUrl, cardImageUrl
       });
     }
   };
+  const containerRef = useRef(null);
+  const cardHeight = 881;
+  const gap = 0;
+
+
 
   return (
-    <div className={`${card()} ${cardBlur()}`} style={{ backgroundImage: `url(${imageUrl})` }} onClick={() => { setIsDialogOpen(false); }}>
-      <div className="relative z-10 flex flex-col h-full">
-        <div className={descriptionArea()}>
-          <span className={`${descriptionImageContainer()} ${borderGradient()}`}>
-            <Image className={`${descriptionImage()}`} src={cardImageUrl} alt="" width={1920} height={1080} />
-          </span>
-          <SimpleBar className="max-h-[250px]  ">
-            <p className={descriptionClass()}>{description}</p>
-          </SimpleBar>
-          {/* <span className={titleClass()}>{title}</span> */}
-          <span className={`${titleClass()} relative mt-6 transition-opacity duration-300 group-hover:opacity-0`}>{title}</span>
-        </div>
+    <div className="flex flex-col xl:flex-row bg-zinc-900 rounded-2xl shadow-lg overflow-hidden mx-4 my-6 hover:shadow-xl transition-all duration-300">
+
+      {/* Imagem do projeto */}
+      <div className="w-full xl:w-1/2 relative h-[250px] xl:h-[320px]">
+        <Image
+          src={imageUrl}
+          alt={title}
+          fill
+          className="object-cover"
+        />
       </div>
-      <Dialog isOpen={isDialogOpen} onClose={() => { setIsDialogOpen(false) }} bgImage={imageUrl}>
-        <div className="flex flex-col w-full h-full overflow-y-scroll overflow-x-hidden" ref={containerRef} >
+
+      {/* Conteúdo textual */}
+      <div className="w-full xl:w-1/2 flex flex-col justify-center p-6 text-white">
+        <h2 className="text-2xl font-bold mb-3">{title}</h2>
+        <p className="text-base text-gray-300 mb-4">{description}</p>
+
+        {/* Tecnologias */}
+        {/* <div className="flex flex-wrap gap-3 mb-4 text-sm">
+          <span className="px-3 py-1 rounded-md bg-orange-600">HTML</span>
+          <span className="px-3 py-1 rounded-md bg-blue-600">CSS</span>
+          <span className="px-3 py-1 rounded-md bg-yellow-500 text-black">
+            JavaScript
+          </span>
+          <span className="px-3 py-1 rounded-md bg-purple-600">Bootstrap</span>
+        </div> */}
+
+        {/* Botão */}
+        <button
+          onClick={() => setIsDialogOpen(true)}
+          className="self-start px-5 py-2 rounded-lg bg-[#396291] transition-all duration-200"
+        >
+          {/* bg-orange-500 hover:bg-orange-600 */}
+          Ver projeto
+        </button>
+
+      </div>
+
+      {/* Dialog para detalhes */}
+      <Dialog
+        isOpen={isDialogOpen}
+        onClose={() => setIsDialogOpen(false)}
+        bgImage={imageUrl}
+      >
+        <div className="flex flex-col w-full h-full overflow-y-scroll overflow-x-hidden" ref={containerRef}>
           {dialogData.length > 1 && (
             <div className='z-[101]'>
               <button onClick={() => scroll('up')} className="xl:flex hidden absolute right-5 top-15 -translate-y-1/2 bg-white/10 text-white rounded-full w-15 h-15 items-center justify-center hover:bg-white/40 transition-all duration-300">
@@ -89,6 +124,7 @@ export default function ProjectCard({ title, description, imageUrl, cardImageUrl
               </button>
             </div>
           )}
+
           {dialogData.map((item, index) => (
             <div key={index} className='flex xl:flex-row flex-col xl:items-start items-center w-full !min-h-full h-full z-10'>
               <span className='xl:inline relative xl:w-[33%] w-[90%] xl:h-full h-[calc(100%-1300px)] flex xl:ml-[4%]'>
@@ -113,9 +149,11 @@ export default function ProjectCard({ title, description, imageUrl, cardImageUrl
                   <video src={item.videoSrc}
                     autoPlay
                     loop
+                    muted
                     width="0"
                     height="0"
-                    className="rounded-md shadow-lg w-full"></video>
+                    className="rounded-md shadow-lg w-full">
+                    </video>
                 </span>
               </span>
             </div>
