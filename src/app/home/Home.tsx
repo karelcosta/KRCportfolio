@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { getScaleFactor } from "../../../public/utils/utils";
 import { Code, SquareArrowOutUpRight } from "lucide-react";
@@ -11,7 +11,7 @@ import ProImage from "../../../public/assets/NewProfile.png";
 
 
 export default function Home() {
-  const router = useRouter();
+  // const router = useRouter();
   const [scale, setScale] = useState(1);
 
   useEffect(() => {
