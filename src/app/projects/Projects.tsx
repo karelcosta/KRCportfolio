@@ -39,7 +39,7 @@ export default function Projects() {
 
     // 
     const tiETeDialogData = [
-        new DialogData("./assets/game.png", "./assets/img1.png", "./assets/img2.png", "/videos/TiETeGame.MP4",
+        new DialogData("./assets/game.png", "./assets/img1.png", "./assets/img2.png", "../../../public/videos/TiETeGame.mp4",
             "O objetivo principal do jogador em Ti&Tê é proteger a Tartaruga Limpa da aniquilação. A jogabilidade se desenrola em um mapa bipartido — a Zona Limpa e a Zona Suja — onde a Tartaruga Limpa é o alvo constante dos ataques inimigos.", "O ciclo de jogo é baseado em gerenciamento de recursos e defesa posicional. O jogador deve coletar recursos Algas e Pérolas, que se convertem em energia. Esta energia é a moeda para invocar os próprios combatentes.",
             "Todas as unidades aliadas e inimigas são geradas próximas às suas respectivas tartarugas. O posicionamento estratégico das unidades do jogador é crucial para criar barreiras e contra-ataques eficazes contra as levas de inimigos gerados pela Tartaruga Suja."
             , "ti&te"
@@ -50,13 +50,13 @@ export default function Projects() {
             "Ambas as tartarugas determinam os pontos de surgimento (spawn) das suas respectivas tropas no mapa.",
             "Tartarugas"
         ),
-        new DialogData("./assets/stincat.png", "./assets/catfish.png", "./assets/cameowrao.png", "./videos/TiETeCameowraoExplosion.MP4",
+        new DialogData("./assets/stincat.png", "./assets/catfish.png", "./assets/cameowrao.png", "/videos/TiETeCameowraoExplosion.MP4",
             "O jogador invoca três tipos de soldados, que são fusões de peixes e gatos. Eles têm aparência limpa.",
             "O Catfish (Melee) é a unidade corpo a corpo, usada para defender e absorver dano na linha de frente.",
             "O Stincat (Ranged) é a unidade de ataque à distância, para suporte de fogo. O Cameowrão (Kamikaze) é a unidade de sacrifício com ataque explosivo.",
             "Characters"
         ),
-        new DialogData("./assets/stincatEnemy.png", "./assets/catfishEnemy.png", "./assets/cameowraoEnemy.png", "./videos/TiETeTentacle.MP4",
+        new DialogData("./assets/stincatEnemy.png", "./assets/catfishEnemy.png", "./assets/cameowraoEnemy.png", "/videos/TiETeTentacle.MP4",
             "Os inimigos são versões corrompidas dos soldados do jogador (fusões de peixes e gatos), com aparência suja. Eles tentam matar a Tartaruga Limpa.",
             "Eles também se dividem em três classes: Melee, Ranged e Kamikaze.",
             "Além dos soldados, Tentáculos surgem no cenário como obstáculos ou pontos de spawn inimigos adicionais.",
