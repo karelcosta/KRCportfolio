@@ -96,7 +96,7 @@ export default function ProjectCard({
         {/* Botão */}
         <button
           onClick={() => setIsDialogOpen(true)}
-          className="self-start px-5 py-2 rounded-lg bg-[#396291] transition-all duration-200"
+          className="self-start px-5 py-2 rounded-lg bg-[#e51c23] border-3 border-[#b0120a] hover:border-[#4a148c] hover:bg-[#b0120a] transition-all duration-200"
         >
           {/* bg-orange-500 hover:bg-orange-600 */}
           Ver projeto
