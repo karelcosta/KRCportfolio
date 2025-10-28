@@ -1,9 +1,3 @@
-// import Home from "./home/Home";
-
-// export default function Page() {
-//   return <Home />;
-// }
-
 import Sidebar from "./components/Sidebar";
 import Home from "./home/Home";
 import Projects from "./projects/Projects";

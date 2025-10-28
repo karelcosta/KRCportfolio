@@ -13,46 +13,19 @@ interface ProjectCardProps {
   dialogData: DialogData[];
 }
 
-export const teste = tv({
-  slots: {
-    card: "group flex flex-col-reverse mx-3 xl:w-[500px] w-[300px] xl:h-[500px] h-[300px] xl:min-w-[500px] xl:min-h-[500px] min-w-[300px] min-h-[300px] transition-all duration-180 bg-cover xl:hover:cursor-pointer xl:hover:h-[500px]  rounded-2xl bg-no-repeat bg-center",
-    cardBlur: "relative before:content-[''] before:rounded-2xl before:absolute before:inset-0 before:bg-black/70 before:backdrop-blur-sm before:opacity-0 before:transition-opacity before:duration-180 xl:hover:before:opacity-100",
-    // titleClass: "absolute w-full text-center bottom-[8px] left-1/2 -translate-x-1/2  text-white  font-[family-name:var(--font-jersey-10)] xl:text-6xl text-9xl  opacity-100 transition-all duration-180 xl:group-hover:translate-y-[-400px]",
-    titleClass: " w-full text-center     text-white  font-[family-name:var(--font-jersey-10)] xl:text-6xl text-9xl  opacity-100 transition-all duration-180 xl:group-hover:translate-y-[-400px]",
-    dialogTitleClass: "mx-auto font-[family-name:var(--font-jersey-10)] xl:text-7xl text-9xl mt-[75px] text-white",
-    descriptionClass: "text-white  indent-[30px] font-[family-name:var(--font-geist-mono)] opacity-0 transition-all duration-180  xl:group-hover:opacity-100 mx-[auto] mt-[22px] text-[20px]  w-[calc(100%*1/2*1.7777)] text-justify scroll-auto",
-    descriptionArea: "relative flex flex-col h-full",
-    // descriptionImageContainer: "opacity-0 scale-0 xl:group-hover:opacity-100 xl:group-hover:scale-100 relative w-[calc(100%*1/2*1.7777)] min-h-[calc(100%*1/1.5*0.5625)] m-auto mb-0 mt-[12px] rounded-md transition-all ease-in-out overflow-hidden",
-    descriptionImageContainer: "opacity-0 scale-0 xl:group-hover:opacity-100 xl:group-hover:scale-100 relative w-[calc(100%*1/2*1.7777)] min-h-[200px] mx-auto mt-[12px] mb-[20px] rounded-md transition-all ease-in-out overflow-hidden",
-
-    descriptionImage: "w-[calc(100%-3px)] h-[calc(100%-3px)] object-cover rounded-md justify-center m-auto my-[1.5px]",
-    borderGradient: "before:content-[''] before:absolute before:bg-amber-500 before:h-full before:w-full before:p-10 before:z-[-1] before:bg-[conic-gradient(magenta,cyan,magenta)] before:animate-custom-spin before:linear"
-  }
-});
-
-const {
-  // card,
-  // cardBlur,
-  // titleClass,
-  dialogTitleClass,
-  // descriptionArea,
-  // descriptionClass,
-  // descriptionImage,
-  // borderGradient,
-  // descriptionImageContainer
-} = teste();
+export const teste = tv({slots: {dialogTitleClass: "mx-auto font-[family-name:var(--font-jersey-10)] xl:text-7xl text-9xl mt-[75px] text-white",}});
+const {dialogTitleClass} = teste();
 
 export default function ProjectCard({
   title,
   description,
   imageUrl,
-  // cardImageUrl,
   dialogData,
 }: ProjectCardProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const scroll = (direction: string) => {
     if (containerRef.current) {
-      //@ts-expect-error null inexistent
+      // @ts-expect-error null inexistent
       containerRef.current.scrollBy({
         top: direction === 'down' ? cardHeight + gap : -(cardHeight + gap),
         behavior: 'smooth'
@@ -61,7 +34,7 @@ export default function ProjectCard({
   };
   const containerRef = useRef(null);
   const cardHeight = 881;
-  const gap = 0;
+  const gap = 1;
 
 
 
