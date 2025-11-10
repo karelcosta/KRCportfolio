@@ -22,9 +22,12 @@ export default function Sidebar() {
         <h1 className="text-3xl font-bold mb-10"> arel</h1>
       </div>
       <div className="flex gap-6 ">
-        <button onClick={() => scrollTo("home")}>Home</button>
-        <button onClick={() => scrollTo("projects")}>Projects</button>
-        {/* <button onClick={() => scrollTo("about")}>About</button> */}
+        <button onClick={() => scrollTo("home")}>Início</button>
+        <button onClick={() => scrollTo("projects")}>Projetos</button>
+        {/* <button onClick={() => scrollTo("about")}>Sobre</button>
+        <button onClick={() => scrollTo("projects")}>Experiência</button>
+        <button onClick={() => scrollTo("projects")}>Formação</button>
+        <button onClick={() => scrollTo("contact")}>Contato</button> */}
       </div>
     </div>
   );
