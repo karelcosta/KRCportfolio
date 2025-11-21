@@ -31,8 +31,10 @@ export default function Home() {
 // text-[#4a148c] roxo
 // text-[#e51c23] vermelho
 // bg-[#CCCCCC]
+// 0f0f0f - cinza mais escuro
+//1E1E1E - cinza claro
   return (
-    <div className=" w-full min-h-screen bg-[#1E1E1E] text-black relative overflow-hidden">
+    <div className=" w-full min-h-screen bg-[#0f0f0f] text-black relative overflow-hidden">
       <div
         className="absolute top-0 left-0 origin-top-left"
         style={{

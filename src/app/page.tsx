@@ -1,7 +1,7 @@
 import Sidebar from "./components/Sidebar";
 import Home from "./home/Home";
+import About from "./About/About";
 import Projects from "./projects/Projects";
-// import About from "./About/About";
 // import Contact from "./Contact/Contact"
 // import Education from "./Education/Education"
 // import Experience from "./Experience/Experience"
@@ -13,19 +13,19 @@ export default function Page() {
       <div id="home" className="mt-[80px] w-full h-full">
         <Home />
       </div>
+      {/* <div id="about">
+        <About />
+      </div> */}
       <div id="projects">
         <Projects />
       </div>
-      {/* <div id="about">
-        <About />
-      </div>
-      <div id="experience">
+      {/* <div id="experience">
         <Experience />
-      </div>
-      <div id="education">
+      </div> */}
+      {/* <div id="education">
         <Education />
-      </div>
-      <div id="contact">
+      </div> */}
+      {/* <div id="contact">
         <Contact />
       </div> */}
       
