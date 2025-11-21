@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function About() {
 
-    const [scale] = useState(1); // Você pode ajustar esse valor dinamicamente
+    // const [scale] = useState(1); // Você pode ajustar esse valor dinamicamente
     return (
         // <div className="bg-[#1E1E1E] ">
 
