@@ -1,6 +1,6 @@
 import Sidebar from "./components/Sidebar";
 import Home from "./home/Home";
-import About from "./About/About";
+// import About from "./About/About";
 import Projects from "./projects/Projects";
 // import Contact from "./Contact/Contact"
 // import Education from "./Education/Education"
