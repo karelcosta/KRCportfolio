@@ -29,9 +29,9 @@ export default function Home() {
     return () => window.removeEventListener("resize", updateScale);
   }, []);
 
-  // const handleButtonHireMeClick = () => {
-  //   window.open("https://www.linkedin.com/in/karel-costa-350345337/", "_blank", "noopener,noreferrer");
-  // };
+  const handleButtonHireMeClick = () => {
+    window.open("https://www.linkedin.com/in/karel-costa-350345337/", "_blank", "noopener,noreferrer");
+  };
   // const handleButtonGitHubClick = () => {
   //   window.open("https://github.com/karelcosta", "_blank", "noopener,noreferrer");
   // };
@@ -70,10 +70,10 @@ export default function Home() {
                 <button onClick={() => scrollTo("projects")} className="transform active:scale-90 flex items-center justify-center gap-4 w-full border-4 px-4 py-3 bg-[#e51c23] border-[#b0120a]  text-white rounded-xl hover:border-[#4a148c] hover:bg-[#b0120a] transition text-xl">
                   Projetos <Code className="w-6 h-6" />
                 </button>
-                {/* <button onClick={handleButtonHireMeClick} className="transform active:scale-90 flex items-center justify-center gap-4 w-full px-4 py-3 border-4 border-[#e51c23] text-[#FFFFFF] rounded-xl hover:border-[#4a148c] hover:bg-[#e51c23] hover:text-white transition text-xl font-bold">
+                <button onClick={handleButtonHireMeClick} className="transform active:scale-90 flex items-center justify-center gap-4 w-full px-4 py-3 border-4 border-[#e51c23] text-[#FFFFFF] rounded-xl hover:border-[#4a148c] hover:bg-[#e51c23] hover:text-white transition text-xl font-bold">
                   LinkedIn  <SquareArrowOutUpRight className="w-6 h-6" />
-                </button> */}
-                <a
+                </button>
+                {/* <a
                   href="Karel_Ribeiro_Costa.pdf"
                   download
                   target="_blank"
@@ -81,7 +81,7 @@ export default function Home() {
                   className="transform active:scale-90 flex items-center justify-center gap-4 w-full px-4 py-3 border-4 border-[#e51c23] text-[#FFFFFF] rounded-xl hover:border-[#4a148c] hover:bg-[#e51c23] hover:text-white transition text-xl font-bold"
                 >
                   Baixar CV <SquareArrowOutUpRight className="w-6 h-6" />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
