@@ -74,7 +74,7 @@ export default function Home() {
                   LinkedIn  <SquareArrowOutUpRight className="w-6 h-6" />
                 </button> */}
                 <a
-                  href="/Karel_Ribeiro_Costa.pdf"
+                  href="Karel_Ribeiro_Costa.pdf"
                   download
                   target="_blank"
                   rel="noopener noreferrer"
