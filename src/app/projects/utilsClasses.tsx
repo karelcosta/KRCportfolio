@@ -7,7 +7,8 @@ export class DialogData {
   secondText: string;
   thirdText: string;
   titleText: string;
-  constructor(mainImage: string, upperMinorImage: string, bottomMinorImage: string, videoSrc: string, firstText: string, secondText: string, thirdText: string, titleText: string) {
+  mobile: boolean;
+  constructor(mainImage: string, upperMinorImage: string, bottomMinorImage: string, videoSrc: string, firstText: string, secondText: string, thirdText: string, titleText: string, mobile: boolean ) {
     this.mainImage = mainImage;
     this.upperMinorImage = upperMinorImage;
     this.bottomMinorImage = bottomMinorImage;
@@ -16,5 +17,6 @@ export class DialogData {
     this.secondText = secondText;
     this.thirdText = thirdText;
     this.titleText = titleText;
+    this.mobile = mobile;
   }
 }

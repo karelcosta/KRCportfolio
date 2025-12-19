@@ -27,11 +27,11 @@ export default function Sidebar() {
       </div>
       <div className="flex gap-6 ">
         <button onClick={() => scrollTo("home")}>Início</button>
+        {/* <button onClick={() => scrollTo("about")}>Sobre</button> */}
         <button onClick={() => scrollTo("projects")}>Projetos</button>
-        {/* <button onClick={() => scrollTo("about")}>Sobre</button>
-        <button onClick={() => scrollTo("projects")}>Experiência</button>
-        <button onClick={() => scrollTo("projects")}>Formação</button>
-        <button onClick={() => scrollTo("contact")}>Contato</button> */}
+        {/* <button onClick={() => scrollTo("projects")}>Experiência</button> */}
+        {/* <button onClick={() => scrollTo("projects")}>Formação</button> */}
+        {/* <button onClick={() => scrollTo("contact")}>Redes</button> */}
       </div>
     </div>
   );

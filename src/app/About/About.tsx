@@ -50,7 +50,7 @@ export default function About() {
                     </div>
                 </div>
             </div> */}
-            <h1 className="text-4xl font-bold mb-12">Sobre mim</h1>
+            <h1 className="text-6xl font-[family-name:var(--font-jersey-10)]  mb-12">Sobre mim</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl w-full">
                 <div className="bg-[#161616] p-8 rounded-xl border border-red-600 shadow-lg transition hover:scale-[1.02]">

@@ -28,7 +28,6 @@ export default function Page() {
       {/* <div id="contact">
         <Contact />
       </div> */}
-      
     </div>
   );
 }
