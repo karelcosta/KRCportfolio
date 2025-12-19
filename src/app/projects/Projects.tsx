@@ -2,7 +2,7 @@
 import { useEffect, useState, useRef } from "react";
 // import { useRouter } from "next/navigation";
 // import Image from "next/image";
-import { getScaleFactor } from "../../../public/utils/utils";
+// import { getScaleFactor } from "../../../public/utils/utils";
 // import { Code, SquareArrowOutUpRight } from "lucide-react";
 // import TiETeCapa from "/assets/TiETeCapa.png";
 import { DialogData } from './utilsClasses';
@@ -15,14 +15,14 @@ export default function Projects() {
     const containerRef = useRef(null);
     // const cardWidth = 500;
     // const gap = 24;
-    const [scale, setScale] = useState(1); // Você pode ajustar esse valor dinamicamente
-    useEffect(() => {
-        const updateScale = () => setScale(getScaleFactor());
-        updateScale();
+    // const [scale, setScale] = useState(1); // Você pode ajustar esse valor dinamicamente removi o scale
+    // useEffect(() => {
+    //     const updateScale = () => setScale(getScaleFactor());
+    //     updateScale();
 
-        window.addEventListener('resize', updateScale);
-        return () => window.removeEventListener('resize', updateScale);
-    }, []);
+    //     window.addEventListener('resize', updateScale);
+    //     return () => window.removeEventListener('resize', updateScale);
+    // }, []);
     // const scroll = (direction: string) => {
     //     if (containerRef.current) {
     //         //@ts-expect-error null inexistent
@@ -63,13 +63,13 @@ export default function Projects() {
             "Inimigos", false,
         ),
     ]
-    const duckHuntCorssyRoad = [
-        new DialogData("./assets/game.png", "./assets/img1.png", "./assets/img2.png", "videos/DuckHuntCrossyRoad.mp4",
-            "O objetivo principal do jogador em Ti&Tê é proteger a Tartaruga Limpa da aniquilação. A jogabilidade se desenrola em um mapa bipartido — a Zona Limpa e a Zona Suja — onde a Tartaruga Limpa é o alvo constante dos ataques inimigos.", "O ciclo de jogo é baseado em gerenciamento de recursos e defesa posicional. O jogador deve coletar recursos Algas e Pérolas, que se convertem em energia. Esta energia é a moeda para invocar os próprios combatentes.",
-            "Todas as unidades aliadas e inimigas são geradas próximas às suas respectivas tartarugas. O posicionamento estratégico das unidades do jogador é crucial para criar barreiras e contra-ataques eficazes contra as levas de inimigos gerados pela Tartaruga Suja."
-            , "duckHuntCorssyRoad&te", true,
-        ),
-    ]
+    // const duckHuntCorssyRoad = [
+    //     new DialogData("./assets/game.png", "./assets/img1.png", "./assets/img2.png", "videos/DuckHuntCrossyRoad.mp4",
+    //         "O objetivo principal do jogador em Ti&Tê é proteger a Tartaruga Limpa da aniquilação. A jogabilidade se desenrola em um mapa bipartido — a Zona Limpa e a Zona Suja — onde a Tartaruga Limpa é o alvo constante dos ataques inimigos.", "O ciclo de jogo é baseado em gerenciamento de recursos e defesa posicional. O jogador deve coletar recursos Algas e Pérolas, que se convertem em energia. Esta energia é a moeda para invocar os próprios combatentes.",
+    //         "Todas as unidades aliadas e inimigas são geradas próximas às suas respectivas tartarugas. O posicionamento estratégico das unidades do jogador é crucial para criar barreiras e contra-ataques eficazes contra as levas de inimigos gerados pela Tartaruga Suja."
+    //         , "duckHuntCorssyRoad&te", true,
+    //     ),
+    // ]
 
     return (
         <div className="bg-[#0f0f0f] " >
