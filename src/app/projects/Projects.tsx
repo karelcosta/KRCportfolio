@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useRef } from "react"; //removi o useEffect, useState, 
 // import { useRouter } from "next/navigation";
 // import Image from "next/image";
 // import { getScaleFactor } from "../../../public/utils/utils";
