@@ -1,7 +1,7 @@
 "use client";
 // import { useRouter } from "next/navigation";
-import Image from "next/image";
-import IconImage from "../favicon.ico";
+// import Image from "next/image";
+// import IconImage from "../favicon.ico";
 
 export default function Sidebar() {
   // const router = useRouter();
