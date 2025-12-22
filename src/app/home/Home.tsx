@@ -54,11 +54,11 @@ export default function Home() {
           {/* amostruario do portifolio */}
           <div className="flex flex-col xl:flex-row xl:gap-[60px] h-full overflow-hidden items-center p-10 justify-center">
             <div className="h-full xl:max-w-[50%] overflow-hidden">
-              <Image alt="dev" src={ProImage} width={0} height={0} className="xl:h-[100%] xl:w-[calc(100%*1.5)] relative" />
+              <Image alt="dev" src={ProImage} width={0} height={0} className="xl:h-[100%] xl:w-[calc(100%*1.5)] w-[120%] h-auto relative" />
             </div>
-            <div className="flex flex-col xl:h-[400px] h-full xl:w-[600px] w-full xl:text-lg text-4xl font-[family-name:var(--font-geist-mono)] text-justify mt-10 xl:mt-0 text-[#FFFFFF]">
-              <span className="text-5xl mb-4 text-center ">Hi! I&apos;m Karel Costa</span>
-              <span className="text-7xl font-[family-name:var(--font-jersey-10)] mb-6 text-center text-[#1F6FEB]">Game & Web developer</span>
+            <div className="flex flex-col xl:h-[400px] h-full xl:w-[600px] w-full xl:text-lg text-6xl font-[family-name:var(--font-geist-mono)] text-justify mt-10 xl:mt-0 text-[#FFFFFF]">
+              <span className="xl:text-5xl text-8xl mb-4 text-center ">Hi! I&apos;m Karel Costa</span>
+              <span className="xl:text-7xl text-9xl font-[family-name:var(--font-jersey-10)] mb-6 text-center text-[#1F6FEB]">Game & Web developer</span>
               Desenvolvedor Full-Stack e de jogos com 2 anos de experiência, formado em Ciência da Computação.
               Atuando com Typescript/Node.js e Unity.
               Experiência prática em implementação de funcionalidades, refatoração, manutenção, criação de mecânicas e protótipos,
@@ -67,11 +67,11 @@ export default function Home() {
                 {/* <button onClick={handleButtonGitHubClick} className="transform active:scale-90 flex items-center justify-center gap-4 w-full border-4 px-4 py-3 bg-[#e51c23] border-[#b0120a]  text-white rounded-xl hover:border-[#4a148c] hover:bg-[#b0120a] transition text-xl">
                   GitHub <Code className="w-6 h-6" />
                 </button> */}
-                <button onClick={handleButtonHireMeClick} className="transform active:scale-90 flex items-center justify-center gap-4 w-full px-4 py-3 border-4 border-[#1F6FEB] text-[#FFFFFF] rounded-xl  hover:text-white transition text-xl font-bold">
-                  LinkedIn  <SquareArrowOutUpRight className="w-6 h-6" />
+                <button onClick={handleButtonHireMeClick} className="transform active:scale-90 flex items-center justify-center gap-4 w-full px-4 xl:py-3 py-16 border-4 border-[#1F6FEB] text-[#FFFFFF] rounded-xl  hover:text-white transition font-bold xl:text-xl text-7xl">
+                  LinkedIn  <SquareArrowOutUpRight className="xl:w-6 xl:h-6 w-20 h-20" />
                 </button>
-                <button onClick={() => scrollTo("projects")} className="transform active:scale-90 flex items-center justify-center gap-4 w-full border-4 px-4 py-3 bg-[#1F6FEB] border-[#1F6FEB]  text-white rounded-xl   transition text-xl">
-                  Projetos <Code className="w-6 h-6" />
+                <button onClick={() => scrollTo("projects")} className="transform active:scale-90 flex items-center justify-center gap-4 w-full border-4 px-4 xl:py-3 py-16 bg-[#1F6FEB] border-[#1F6FEB]  text-white rounded-xl   transition xl:text-xl text-7xl">
+                  Projetos <Code className="xl:w-6 xl:h-6 w-20 h-20" />
                 </button>
                 {/* <a
                   href="Karel_Ribeiro_Costa.pdf"
