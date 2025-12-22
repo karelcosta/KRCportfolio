@@ -72,7 +72,7 @@ export default function Projects() {
     // ]
 
     return (
-        <div className="bg-[#0f0f0f] " >
+        <div className="bg-[#0D1117] " >
 
            
             {/* <div className="relative w-full min-h-[80px] overflow-hidden">

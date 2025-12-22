@@ -43,7 +43,7 @@ export default function ProjectCard({
 
   return (
     <div>
-      <div className="flex flex-col xl:flex-row bg-zinc-900 rounded-2xl shadow-lg overflow-hidden mx-4 my-6 hover:shadow-xl transition-all duration-300">
+      <div className="flex flex-col xl:flex-row bg-[#0D1117] border border-white rounded-2xl shadow-lg overflow-hidden mx-4 my-6 hover:shadow-xl transition-all duration-300">
         <div className="w-full xl:w-1/2 relative h-[250px] xl:h-[320px]">
           <Image
             src={imageUrl}
@@ -57,7 +57,7 @@ export default function ProjectCard({
           <p className="text-base text-gray-300 mb-4">{description}</p>
           <button
             onClick={() => setIsDialogOpen(true)}
-            className="self-start px-5 py-2 rounded-lg bg-[#e51c23] border-3 border-[#b0120a] hover:border-[#4a148c] hover:bg-[#b0120a] transition-all duration-200"
+            className="self-start px-5 py-2 rounded-lg bg-[#1F6FEB] border-3 border-[#0D1117] hover:border-[#1F6FEB] hover:bg-[#1F6FEB] transition-all duration-200"
           >
             Ver projeto
           </button>
